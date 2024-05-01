@@ -1,5 +1,5 @@
 import axios from "axios";
-const url = "http://localhost:5000/api";
+const url = "https://bsa-hostle-website.onrender.com";
 const config = {
   headers: {
     "Content-Type": "application/json",

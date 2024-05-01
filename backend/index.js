@@ -8,7 +8,11 @@ const { DATABASE_NAME, DATABASE_PASSWORD } = process.env;
 const app = express();
 const PORT = 5000;
 
-app.use(cors());
+app.use(cors({
+    origin:["https://bsa-hostle-website.vercel.app"],
+    methods:["POST","GET","PUT"],
+    credentials:true
+}));
 app.use(express.json());
 app.use("/api", Router);
 

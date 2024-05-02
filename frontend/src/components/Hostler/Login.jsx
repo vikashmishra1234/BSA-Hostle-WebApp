@@ -11,9 +11,9 @@ const Login = () => {
         e.preventDefault()
        setLoader(true)
        const res=await studentLogin(loginInfo);
+       localStorage.setItem("jwtToken",res.jwtToken);
        setLoader(false)
        if(res.success){
-        localStorage.setItem("jwtToken",res.jwtToken);
         Navigate('/hostle/main');
        }
     }

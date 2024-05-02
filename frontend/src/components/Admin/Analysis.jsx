@@ -12,8 +12,8 @@ const Analysis = () => {
                     const res = await getRecent();
                     setRecents(res.recentStudents);
             }
-            getData()
-    },[change])
+            localStorage.getItem("jwtAdmin")&&getData()
+    },[change,localStorage.getItem("jwtAdmin")])
   return (
    <section className='analysis'>
     <div className='graph-analysis analysis-common'>

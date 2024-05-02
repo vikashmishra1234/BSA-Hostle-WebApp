@@ -17,8 +17,8 @@ const AdminHeader = () => {
       setTolalStudents(res.allStudents)
      
     }
-    getData()
-  },[])
+    localStorage.getItem("jwtAdmin")&&getData()
+  },[localStorage.getItem("jwtAdmin")])
   return (
     <section className="admin-container">
       {

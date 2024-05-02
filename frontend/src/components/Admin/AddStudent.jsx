@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { addStudent } from '../services/Admin';
 import { MyContext } from '../../Context/Contex';
+import { Loading } from '../Loader';
 
 
 const AddStudent = () => {
@@ -14,6 +15,7 @@ const AddStudent = () => {
     studentYear: ''
   });
   const {change,setChange} = useContext(MyContext);
+  const [loader,setLoader]= useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,17 +25,22 @@ const AddStudent = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     // You can handle form submission here, such as sending data to backend or performing validation
+    setLoader(true)
     const res = await addStudent(formData);
+    setLoader(false)
     if(res.success){
 setChange(!change);
 alert("Student Saved Successfully");
-setFormData({})
+setFormData('')
     }
     
   };
 
   return (
     <div className="student-container" id='addstudent'>
+      {
+        loader&&<Loading/>
+      }
         <h2>Add Student</h2>
       <form onSubmit={handleSubmit}>
         <input

@@ -7,7 +7,7 @@ const style = {
     left:'0%',
     right:"0%",
     width:'60%',
-    color:'white',padding:"30px",background:'#a09494',
+    color:'white',background:'#a09494',
     boxShadow:"0px 3px 17px black",
     padding:' 50px 10px 45px 10px',
     margin:'auto'

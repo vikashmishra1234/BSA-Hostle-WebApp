@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { studentLogin } from '../services/Student';
 import { Navigate, useNavigate } from 'react-router-dom';
+import { Loading } from '../Loader';
 
 const Login = () => {
     const [loginInfo,setLoginInfo] = useState({studentRollNumber:'',studentPassword:""});
+    const [loader,setLoader] = useState(false);
     const Navigate = useNavigate();
     const handleSubmit=async(e)=>{
         e.preventDefault()
-       
-       const res=await studentLogin(loginInfo)
+       setLoader(true)
+       const res=await studentLogin(loginInfo);
+       setLoader(false)
        if(res.success){
         localStorage.setItem("jwtToken",res.jwtToken);
         Navigate('/hostle/main');
@@ -22,6 +25,11 @@ const Login = () => {
     }
   return (
     <div className="login-container">
+      {
+        loader&&<Loading/>
+
+        
+      }
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div className="input-group">

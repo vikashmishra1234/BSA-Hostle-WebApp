@@ -1,5 +1,6 @@
 import axios from "axios";
-const url = "https://bsa-hostle-website.onrender.com";
+// const url = "https://bsa-hostle-website.onrender.com";
+const url ="https://bsa-hostle-website.onrender.com";
 const config = {
   headers: {
     "Content-Type": "application/json",
@@ -9,14 +10,15 @@ const config = {
 export const sendComplaint = async (data) => {
   try {
     const res = await axios.post(`${url}/add/complaint`, data, config);
-    console.log(res);
+   return res.data
   } catch (error) {
     console.log(error);
   }
 };
 export const studentLogin = async (data) => {
   try {
-    const res = await axios.post(`${url}/student/login`, data, config);
+  
+    const res = await axios.post(`${url}/student/login`, data);
     return res.data;
   } catch (error) {
     alert(error.message)

@@ -10,14 +10,14 @@ const studentSchema = z.object({
 
 const validateComplaint = (req,res,next) => {
   try {
-    console.log(req.body)
+   
     const validatedData = studentSchema.parse(req.body);
   
     req.body =  validatedData;
     next()
   } catch (error) {
    
-    return res.json({errors:error.errors})
+    return res.json({errors:error.errors,message:'the lenght of title and description is more than 5 and 15 respectively'})
   }
 };
 

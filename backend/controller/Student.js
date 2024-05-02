@@ -10,7 +10,7 @@ exports.addComplaint=async(req,res)=>{
        req.body.studentId=req.student.id;
        req.body.from=req.student.email
     const isSend = await sendMail(req.body);
-    
+   
     if(!isSend.send){
         return res.status(404).json({success:false,error:'unable to register your complaint'})
     }

@@ -1,0 +1,33 @@
+
+{
+    "routes":[
+        {
+            "src":"/",
+            "dest":"/"
+        },
+        {
+            "src":"/admin",
+            "dest":"/"
+        },
+        {
+            "src":"/hostler",
+            "dest":"/"
+        },
+        {
+            "src":"/admin/main",
+            "dest":"/"
+        },
+        {
+            "src":"/hostle/main",
+            "dest":"/"
+        },
+        {
+            "src":"/about",
+            "dest":"/"
+        },
+        {
+            "src":"/administration",
+            "dest":"/"
+        }
+    ]
+}

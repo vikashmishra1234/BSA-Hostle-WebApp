@@ -19,7 +19,7 @@ exports.sendMail =async (body) => {
       attachments: [
         {
             filename: 'image.png', 
-            path: req.body.imageUrl, 
+            path:body.imageUrl, 
             cid: 'unique@nodemailer.com' 
         }
     ]

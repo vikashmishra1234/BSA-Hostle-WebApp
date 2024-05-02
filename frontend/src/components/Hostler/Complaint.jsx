@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { sendComplaint } from '../services/Student';
+import { Loading } from '../Loader';
 
 const Complaint = () => {
 
     const [complaint,setComplait] = useState({});
     const [show,setShow] = useState(false);
+    const [loader,setLoader]=useState(false);
 
     const handleChange = async(e)=>{
         const formData = new FormData();
@@ -18,10 +20,20 @@ const Complaint = () => {
 
     const handleSubmit = async(e)=>{
         e.preventDefault();
-        await sendComplaint(complaint);
+        setLoader(true)
+        const res=await sendComplaint(complaint);
+       
+        setLoader(false)
+        alert(
+          res.message
+        )
+        
     }
   return (
     <section id='complaint' className='complaint-container'>
+      {
+        loader&&<Loading/>
+      }
         <h1 onClick={()=>setShow(!show)}>
             Register A Complaint ?
         </h1>

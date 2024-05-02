@@ -54,12 +54,12 @@ exports.studentLogin=async(req,res)=>{
 
     const studentExit = await Hostler.findOne({studentRollNumber:req.body.studentRollNumber});
     if(!studentExit){
-        return res.status(404).json({success:false,error:'Student is Not A Hostler '});
+        return res.status(500).json({success:false,error:'Student is Not A Hostler '});
     }
    const isCompared = bcrypt.compareSync(req.body.studentPassword,studentExit.studentPassword);
    
    if(!isCompared){
-    return res.status(409).json({success:false,error:"invalid Password"});
+    return res.status(500).json({success:false,error:"invalid Password"});
    }
    const data = {
     id:studentExit._id,

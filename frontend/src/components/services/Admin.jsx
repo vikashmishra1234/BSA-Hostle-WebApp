@@ -1,12 +1,8 @@
 import axios from 'axios';
 const url = 'https://bsa-backend-server.onrender.com/api';
+// const url = 'http://localhost:5000/api';
 
-const config = {
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `bearer ${localStorage.getItem("jwtAdmin")}`,
-    },
-  };
+
 
 export const adminLogin = async (data) => {
     try {
@@ -18,6 +14,12 @@ export const adminLogin = async (data) => {
     }
   };
 export const issueNotice = async (data) => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `bearer ${localStorage.getItem("jwtAdmin")}`,
+    },
+  };
     try {
       const res = await axios.post(`${url}/issue/notice`, data,config);
       return res.data;
@@ -27,6 +29,12 @@ export const issueNotice = async (data) => {
     }
   };
 export const addStudent = async (data) => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `bearer ${localStorage.getItem("jwtAdmin")}`,
+    },
+  };
     try {
       const res = await axios.post(`${url}/add/student`, data, config);
       return res.data;
@@ -36,6 +44,12 @@ export const addStudent = async (data) => {
     }
   };
 export const getRecent = async () => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `bearer ${localStorage.getItem("jwtAdmin")}`,
+    },
+  };
     try {
       const res = await axios.get(`${url}/get/recent`, config);
       return res.data;
@@ -45,6 +59,12 @@ export const getRecent = async () => {
     }
   };
 export const getAllStudent = async () => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `bearer ${localStorage.getItem("jwtAdmin")}`,
+    },
+  };
     try {
       const res = await axios.get(`${url}/get/students`, config);
       return res.data;

@@ -1,13 +1,16 @@
 import axios from "axios";
 // const url = "https://bsa-hostle-website.onrender.com";
 const url ="https://bsa-backend-server.onrender.com/api";
-const config = {
-  headers: {
-    "Content-Type": "application/json",
-    "Authorization": `bearer ${localStorage.getItem("jwtToken")}`,
-  },
-};
+// const url = 'http://localhost:5000/api';
+
+
 export const sendComplaint = async (data) => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `bearer ${localStorage.getItem("jwtToken")}`,
+    },
+  };
   try {
     const res = await axios.post(`${url}/add/complaint`, data, config);
    return res.data
@@ -26,6 +29,12 @@ export const studentLogin = async (data) => {
   }
 };
 export const getNotices = async () => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `bearer ${localStorage.getItem("jwtToken")}`,
+    },
+  };
   try {
     const res = await axios.get(`${url}/get/notices`, config);
     return res.data;

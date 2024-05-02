@@ -36,7 +36,7 @@ const Analysis = () => {
         }
         <div className='bottom-header'>
             <h2>
-              <Link to={'/all/students'}>see all</Link> 
+              <Link to={'/hostle/main'}>see all</Link> 
             </h2>
          </div>
     </div>

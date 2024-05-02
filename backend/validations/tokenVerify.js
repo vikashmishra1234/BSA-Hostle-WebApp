@@ -4,6 +4,7 @@ exports.verifyStudent = async (req, res, next) => {
     try {
        
         const header = req.headers.authorization;
+        console.log(header)
         if(!header){
             return res.status(401).json({ success: false, error: 'Authorization token is missing' });
 

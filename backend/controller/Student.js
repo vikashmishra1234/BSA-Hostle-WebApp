@@ -51,7 +51,8 @@ exports.getPassword = async (req, res) => {
 };
 
 exports.studentLogin=async(req,res)=>{
-
+try {
+    
     const studentExit = await Hostler.findOne({studentRollNumber:req.body.studentRollNumber});
     if(!studentExit){
         return res.status(500).json({success:false,error:'Student is Not A Hostler '});
@@ -67,6 +68,9 @@ exports.studentLogin=async(req,res)=>{
    }
    const jwtToken = jwt.sign(data,`${process.env.SECRETE_KEY}`);
    return res.status(200).json({success:true,message:"login successful",jwtToken:jwtToken})
+} catch (error) {
+    return res.json({success:false,error:error.message})
+}
 }
 
 exports.getNotices = async(req,res)=>{

@@ -1,5 +1,5 @@
 import axios from 'axios';
-const url = 'https://bsa-backend-server.onrender.com';
+const url = 'https://bsa-backend-server.onrender.com/api';
 
 const config = {
     headers: {

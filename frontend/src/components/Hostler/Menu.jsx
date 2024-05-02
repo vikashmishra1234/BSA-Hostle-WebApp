@@ -10,7 +10,7 @@ const Menu = () => {
         const res = await getNotices();
         setNotice(res.notices);
       }
-      localStorage.getItem("jwtToken")&& getData();
+      localStorage.getItem("jwtToken")?getData():''
   },[localStorage.getItem("jwtToken")])
   return (
     <section id="notices" className="hostle-notice">

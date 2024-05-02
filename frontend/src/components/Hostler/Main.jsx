@@ -9,7 +9,7 @@ const Main = () => {
   const Navigate = useNavigate()
   useEffect(()=>{
     !localStorage.getItem("jwtToken")&&Navigate('/hostler');
-  },[])
+  },[localStorage.getItem("jwtToken")])
   return (
     <>
     <Home/>

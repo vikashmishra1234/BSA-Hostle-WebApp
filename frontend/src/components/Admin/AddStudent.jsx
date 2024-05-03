@@ -48,7 +48,7 @@ setFormData('')
           name="studentName"
           value={formData.studentName}
           onChange={handleChange}
-          placeholder="Student Name"
+          placeholder="Student Name "
           required
         />
         <input
@@ -72,7 +72,7 @@ setFormData('')
           name="studentRollNumber"
           value={formData.studentRollNumber}
           onChange={handleChange}
-          placeholder="Student Roll Number"
+          placeholder="Student Roll Number (13 chars)"
           required
         />
         <input

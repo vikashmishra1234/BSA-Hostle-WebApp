@@ -20,7 +20,7 @@ const validateStudent = (req,res,next) => {
     next()
   } catch (error) {
    
-    return res.json({errors:"validation faild",message:'validation faild'});
+    return res.json({errors:"validation faild",message:'validation faild',success:true});
   }
 };
 

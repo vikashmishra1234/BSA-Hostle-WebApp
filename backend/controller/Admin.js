@@ -36,7 +36,7 @@ exports.addStudent = async (req, res) => {
 
     if (studentExit) {
       return res
-        .status(409)
+        .status(200)
         .json({ error: "Student Already Exits", success: false });
     }
     const newStudent = await Hostler(req.body);

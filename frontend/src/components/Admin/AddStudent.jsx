@@ -30,7 +30,7 @@ const AddStudent = () => {
     setLoader(false)
     if(res.success){
 setChange(!change);
-alert("Student Saved Successfully");
+alert(res.message);
 setFormData('')
     }
     

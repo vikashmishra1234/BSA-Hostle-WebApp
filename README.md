@@ -31,6 +31,6 @@ Admin Section
 
 1. Clone the repository:
    ```git clone https://github.com/your-username/hostelhub.git```
-   2. Install server dependencies:
+2. Install server dependencies:
       ```cd hostelhub/server
 npm install```

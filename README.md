@@ -30,7 +30,7 @@ Admin Section
 ### Installation
 
 1. Clone the repository:
-   ```git clone https://github.com/your-username/hostelhub.git```
+   ```git clone https://github.com/vikashmishra1234/hostelhub.git```
 2. Install server dependencies:
   ```cd hostelhub/server npm install```
    

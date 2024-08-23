@@ -25,6 +25,8 @@ header {
   z-index: 1000;
   top: -0.1%;
 }
+
+
 nav {
   display: flex;
 
@@ -52,19 +54,21 @@ nav {
     img {
       display: none;
     }
-    li {
-      cursor: pointer;
+  
       a {
         text-decoration: none;
         color: lightgray;
+        li{
+          
+        }
       }
-    }
+    
   }
 }
 .carousel-container {
   position: sticky;
   top: 15%;
-
+height: 60vh;
   z-index: -2000;
 }
 .img {
@@ -194,42 +198,38 @@ nav {
     vertical-align: top;
   }
 }
-.card-container:hover {
-  box-shadow: 4px 9px 12px;
-}
-.card-container {
-  background-image: linear-gradient(#0aebeb, #809dee);
-  transition: 0.2s ease;
-  width: 350px;
 
-  padding-bottom: 20px;
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 360px;
+  height: 408px;
+  position: relative;
+  padding-bottom: 25px;
+  gap: 25px;
+  border: 1px solid lightgray;
 
   img {
     width: 100%;
   }
-  div {
-    text-align: center;
-    padding-top: 10px;
-   
-  }
+ 
   .icon {
-    position: relative;
+    position: absolute;
     background-color: white;
-    top: -9%;
+    top: 210px;
     width: fit-content;
-    left: 41%;
 
     padding: 10px;
     border-radius: 50%;
   }
   h2 {
-    margin-top: 0;
+    margin-bottom: 0;
+    margin-top: 5px;
     text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    font-size: 27px;
-    color: rgb(83, 77, 77);
+    font-family: sans-serif;
+    font-size: 23px;
+    color: rgb(99 99 99);
   }
 }
 
@@ -259,7 +259,7 @@ nav {
 
 .card-wrapper {
   display: flex;
-  background-color: lightblue;
+  background-color: white;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -268,12 +268,14 @@ nav {
   padding-top: 70px;
   padding-bottom: 70px;
   button {
-    padding: 13px;
+    padding: 10px;
     font-size: 18px;
-    width: 102px;
-    background: #ebebb2;
-    border: 2px solid lightgray;
-    box-shadow: 1px 0px 0px;
+    width: 109px;
+    background: #a1a1ff;
+    border: 1px solid lightgray;
+    color: white;
+    /* box-shadow: 1px 0px 0px; */
+    border-radius: 5px;
   }
 }
 
@@ -331,13 +333,8 @@ nav {
       }
     }
   }
-  .card-container {
-    width: 70vw;
-  }
-  .card-wrapper {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
+ 
+ 
   .about-container {
     .section-1 {
       width: 82%;
@@ -360,29 +357,6 @@ nav {
 }
 
 @media screen and (max-width: 600px) {
-  .card-wrapper {
-    background-color: azure;
-    .card-container {
-      border: 1px solid;
-      padding: 5px;
-      width: 80vw;
-      height: 65vh;
-      background: white;
-
-      /* width: 350px; */
-      /* width: 81%; */
-
-      padding-bottom: 20px;
-      h2 {
-        font-size: 24px;
-      }
-      button {
-        padding: 11px;
-        font-size: 15px;
-        border-radius: 10px;
-      }
-    }
-  }
   .about-container {
     .section-1 {
       width: 97%;
@@ -400,7 +374,7 @@ nav {
         .scroll {
           font-size: 12px;
           padding: 5px;
-          margin-top: 4px;
+         margin-top: 15px;
           h1 {
             margin: 0;
           }
@@ -412,11 +386,16 @@ nav {
 
 @media screen and (max-width: 480px) {
   .card-wrapper {
+    gap: 40px;
     .card-container {
       border-radius: 5px;
       width: 86%;
       height: fit-content;
       padding-bottom: 40px;
+     
+    }
+    .icon{
+      top: 48%;
     }
   }
   nav {

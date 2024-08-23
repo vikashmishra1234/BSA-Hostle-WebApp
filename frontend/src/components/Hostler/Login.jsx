@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { studentLogin } from '../services/Student';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { Loading } from '../Loader';
+import '../style/style3.scss'
 
 const Login = () => {
     const [loginInfo,setLoginInfo] = useState({studentRollNumber:'',studentPassword:""});
@@ -14,7 +15,7 @@ const Login = () => {
        localStorage.setItem("jwtToken",res.jwtToken);
        setLoader(false)
        if(res.success){
-        Navigate('/hostle/main');
+        Navigate('/hostler/main');
        }
     }
     const handleClick=()=>{

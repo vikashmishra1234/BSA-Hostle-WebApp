@@ -221,7 +221,7 @@
 
 @media screen and (max-width: 977px) {
   .footer-container{
-    height: 50vh;
+    height: fit-content;
     .copy-container{
       width: 94%;
       /* margin: auto; */
@@ -249,6 +249,9 @@
       }
     }
   }
+  .footer-container section img{
+    width: 320px;
+  }
   .image-container {
     flex-direction: column;
     .image-container1 {
@@ -275,21 +278,21 @@
      
       width: 95%;
       ul{
-        font-size: 18px;
+        font-size: 16px;
       }
       h1{
-        font-size: 24px;
+        font-size: 22px;
       }
       p{
 
-        font-size: 18px;
+        font-size: 16px;
       }
     }
   }
  .about-header{
   padding: 2px;
   h1{
-    font-size: 24px;
+    font-size: 22px;
   }
  }
     .paragraph{
@@ -306,7 +309,9 @@
         font-size: 18px ;
       }
     }
-  
+  .footer-container section img{
+    width: 290px;
+  }
   .image-container {
     .image-container2{
       .info-container{

@@ -11,9 +11,9 @@ const Carousele = () => {
       <Carousel
         showThumbs={false}
         autoPlay={true}
-        interval={3000}
+        interval={4000}
         emulateTouch={true}
-       
+       swipeable={true}
         infiniteLoop={true}
         key={Math.random()}
        

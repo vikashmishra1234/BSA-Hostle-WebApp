@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { adminLogin } from '../services/Admin';
 import { Loading } from '../Loader';
+import '../style/style3.scss'
 
 const AdminLogin = () => {
     const [loginInfo,setLoginInfo] = useState({});

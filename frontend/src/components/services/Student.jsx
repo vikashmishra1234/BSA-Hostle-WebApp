@@ -1,5 +1,4 @@
 import axios from "axios";
-// const url = "https://bsa-hostle-website.onrender.com";
 const url ="https://bsa-backend-server.onrender.com/api";
 // const url = 'http://localhost:5000/api';
 

@@ -27,7 +27,7 @@ const About = () => {
     animate: { opacity: 1, y: 0 },
   };
   const leftFade = {
-    initial: { opacity: 0, x: -100 },
+    initial: { opacity: 0, x: -70 },
     animate: { opacity: 1, x: 0 },
   };
 
@@ -83,7 +83,7 @@ const About = () => {
             initial="initial"
             whileInView="animate"
             variants={leftFade}
-            transition={{ duration: 2, ease: "easeOut" }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
             style={{ textAlign: "left" }}
           >
             <button onClick={handleClick}>Read More</button>
